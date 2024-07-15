@@ -10,6 +10,7 @@ pipeline{
                 sh 'node -v'
                 sh 'npm -v'
                 sh 'npm config set registry https://registry.npmmirror.com'
+                sh 'pwd'
                 sh 'npm install'
                 sh 'npm run docs:build'
             }
