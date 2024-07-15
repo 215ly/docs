@@ -7,13 +7,10 @@ pipeline{
     stages{
         stage("构建代码"){
             steps{
-                echo "检查node环境"
                 sh 'node -v'
-                echo "修改npm下载源"
+                sh 'npm -v'                echo "修改npm下载源"
                 sh 'npm config set registry https://registry.npmmirror.com'
-                echo "安装依赖"
                 sh 'npm install'
-                echo "执行构建命令"
                 sh 'npm run docs:build'
             }
         }
