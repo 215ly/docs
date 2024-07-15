@@ -28,11 +28,17 @@ export default defineConfig({
         sidebar: {
             '/docs/java/': [
                 {
+                    text: 'Java场景题',
+                    collapsed: false,
+                    items: [
+                        {text: '场景题记录', link: 'docs/java/scenario/questions'},
+                    ]
+                },
+                {
                     text: '多线程&并发编程',
                     collapsed: false,
                     items: [
                         {text: '线程池最佳实践', link: '/docs/java/thread/ThreadPool'},
-                        {text: '多线程&并发编程', link: '/docs/java/thread/Thread'},
                     ]
                 }
             ],
