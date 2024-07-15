@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "LiYiDocs"
   text: "LiYiDocs"
-  tagline: My great project tagline
+  tagline: 前端、后端、移动端、小程序
   actions:
     - theme: brand
       text: Markdown Examples
