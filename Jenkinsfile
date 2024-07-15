@@ -5,15 +5,19 @@ pipeline{
     agent any
 
     stages{
-        stage("拉取代码"){
+        stage("构建代码"){
             steps{
-                echo "正在拉取代码。。。"
+                echo "检查node环境"
+                sh 'node -v'
+                echo "修改npm下载源"
+                sh 'npm config set registry https://registry.npmmirror.com'
+                echo "安装依赖"
+                sh 'npm install'
+                echo "执行构建命令"
+                sh 'npm run docs:build'
+                echo "打印出构建完成后的目录结构"
+                sh 'ls .vitepress/'
             }
         }
-        stage("构建代码"){
-                    steps{
-                        echo "正在构建代码。。。"
-                    }
-                }
     }
 }
