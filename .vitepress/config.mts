@@ -1,30 +1,45 @@
-import { defineConfig } from 'vitepress'
+import {defineConfig} from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "LiYiDocs",
-  description: "LiYiDocs",
-  head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
-  themeConfig: {
+    title: "LiYiDocs",
+    description: "LiYiDocs",
+    head: [['link', {rel: 'icon', href: '/favicon.ico'}]],
+    lastUpdated: true, // 最新更新时间戳
+    themeConfig: {
+        search: {
+            provider: 'local'
+        },
+        lastUpdatedText: "最后更新", // string
+        // 编辑链接
+        editLink: {
+            pattern: "https://gitee.com/liyi2020/docs", // 自己项目仓库地址
+            text: "在 gitee 上编辑此页",
+        },
+        // 右侧边栏配置，默认值是"In hac pagina"
+        outlineTitle: "本页目录",
 
-    // https://vitepress.dev/reference/default-theme-config
-    nav: [
-      { text: '首页', link: '/' },
-      // { text: 'Examples', link: '/markdown-examples' }
-    ],
+        // https://vitepress.dev/reference/default-theme-config
+        nav: [
+            {text: '首页', link: '/'},
+            {text: '后端系列', link: '/docs/java/thread/ThreadPool'},
+        ],
 
-    sidebar: [
-      {
-        text: 'Examples',
-        items: [
-          // { text: 'Markdown Examples', link: '/markdown-examples' },
-          // { text: 'Runtime API Examples', link: '/api-examples' }
+        sidebar: {
+            '/docs/java/': [
+                {
+                    text: '多线程&并发编程',
+                    collapsed: false,
+                    items: [
+                        {text: '线程池最佳实践', link: '/docs/java/thread/ThreadPool'},
+                        {text: '多线程&并发编程', link: '/docs/java/thread/Thread'},
+                    ]
+                }
+            ],
+        },
+
+        socialLinks: [
+            {icon: 'github', link: 'https://gitee.com/liyi2020'}
         ]
-      }
-    ],
-
-    socialLinks: [
-      { icon: 'github', link: 'https://gitee.com/liyi2020' }
-    ]
-  }
+    }
 })
