@@ -10,6 +10,7 @@ pipeline{
                 sh 'node -v'
                 sh 'npm -v'
                 sh 'npm config set registry https://registry.npmmirror.com'
+                sh 'npm add -D vitepress'
                 sh 'pwd'
                 sh 'ls -al'
                 sh 'npm install'
