@@ -8,7 +8,7 @@ hero:
   tagline: 前端、后端、移动端、小程序
   actions:
     - theme: brand
-      text: Markdown Examples
+      text: 进入首页
       link: /markdown-examples
     - theme: alt
       text: API Examples
