@@ -17,7 +17,7 @@
 你可以通过一些手段来检测线程池的运行状态比如 SpringBoot 中的 Actuator 组件。
 
 除此之外，我们还可以利用 `ThreadPoolExecutor `的相关 API 做一个简陋的监控。从下图可以看出， `ThreadPoolExecutor`提供了获取线程池当前的线程数和活跃线程数、已经执行完成的任务数、正在排队中的任务数等等。
-![c.png](images%2Fc.png)
+![c.png](..%2F..%2F..%2F.vitepress%2Fpublic%2Fimages%2Fc.png)
 ## 四、线程池的正确命名
 初始化线程池的时候需要显示命名（设置线程池名称前缀），有利于定位问题。
 
