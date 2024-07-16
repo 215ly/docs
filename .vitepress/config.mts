@@ -28,10 +28,17 @@ export default defineConfig({
         sidebar: {
             '/docs/java/': [
                 {
+                    text: '线上问题处理',
+                    collapsed: false,
+                    items: [
+                        {text: '问题记录', link: 'docs/java/online/questions'},
+                    ]
+                },
+                {
                     text: 'Java场景题',
                     collapsed: false,
                     items: [
-                        {text: '场景题记录', link: 'docs/java/scenario/questions'},
+                        {text: '场景题（一）', link: 'docs/java/scenario/questions'},
                     ]
                 },
                 {
