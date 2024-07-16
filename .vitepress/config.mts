@@ -5,6 +5,7 @@ export default defineConfig({
     title: "LiYiDocs",
     description: "LiYiDocs",
     head: [['link', {rel: 'icon', href: '/favicon.ico'}]],
+    base:'/docs',
     lastUpdated: true, // 最新更新时间戳
     themeConfig: {
         search: {
