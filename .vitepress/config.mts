@@ -28,6 +28,7 @@ export default defineConfig({
 
         sidebar: {
             '/docs/java/': [
+
                 {
                     text: '线上问题处理',
                     collapsed: false,
@@ -46,7 +47,17 @@ export default defineConfig({
                     text: '多线程&并发编程',
                     collapsed: false,
                     items: [
+                        {text: '知识点（一）', link: '/docs/java/thread/thread1'},
+                        {text: '知识点（二）', link: '/docs/java/thread/thread2'},
                         {text: '线程池最佳实践', link: '/docs/java/thread/ThreadPool'},
+                    ]
+                },
+                {
+                    text: 'JVM理论知识补充',
+                    collapsed: false,
+                    items: [
+                        {text: '理论补充（一）', link: '/docs/java/jvm/jvm1'},
+                        {text: '理论补充（二）', link: '/docs/java/jvm/jvm2'},
                     ]
                 }
             ],
