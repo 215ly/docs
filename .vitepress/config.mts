@@ -23,26 +23,45 @@ export default defineConfig({
         // https://vitepress.dev/reference/default-theme-config
         nav: [
             {text: '首页', link: '/'},
-            {text: '后端系列', link: '/docs/java/thread/ThreadPool'},
+            {
+                text: 'Java',
+                items: [
+                  { text: '并发编程', link: '/docs/java/thread/thread1' },
+                  { text: 'JVM', link: '/docs/java/jvm/jvm1' },
+                  { text: '线上问题', link: '/docs/java/online/questions' },
+                  { text: '场景题', link: '/docs/java/scenario/questions' },
+                ]
+            },
+            {
+                text: 'Spring',
+                items: [
+                    { text: 'Spring', link: '/docs/java/springboot/annotation' },
+                    { text: 'SpringBoot', link:'/docs/java/springboot/annotation' },
+                  ]
+                
+            }
         ],
 
         sidebar: {
-            '/docs/java/': [
-
+            '/docs/java/online/': [
                 {
-                    text: '线上问题处理',
+                    text: '线上问题',
                     collapsed: false,
                     items: [
-                        {text: '问题记录', link: 'docs/java/online/questions'},
+                        {text: '问题记录', link: '/docs/java/online/questions'},
                     ]
                 },
+            ],
+            '/docs/java/scenario/': [
                 {
                     text: 'Java场景题',
                     collapsed: false,
                     items: [
-                        {text: '场景题（一）', link: 'docs/java/scenario/questions'},
+                        {text: '场景题（一）', link: '/docs/java/scenario/questions'},
                     ]
                 },
+            ],
+            '/docs/java/thread/': [
                 {
                     text: '多线程&并发编程',
                     collapsed: false,
@@ -51,7 +70,9 @@ export default defineConfig({
                         {text: '知识点（二）', link: '/docs/java/thread/thread2'},
                         {text: '线程池最佳实践', link: '/docs/java/thread/ThreadPool'},
                     ]
-                },
+                }
+            ],
+            '/docs/java/jvm/': [
                 {
                     text: 'JVM理论知识补充',
                     collapsed: false,
@@ -61,10 +82,21 @@ export default defineConfig({
                     ]
                 }
             ],
+            '/docs/java/springboot/': [
+                {
+                    text: 'SpringBoot',
+                    collapsed: false,
+                    items: [
+                        { text: '常见注解', link: '/docs/java/springboot/annotation' },
+                        { text: '项目规范', link: '/docs/java/springboot/projectSpecifications' },
+                        { text: '相关问题', link: '/docs/java/springboot/questions' },
+                    ]
+                }
+            ],
         },
 
         socialLinks: [
-            {icon: 'github', link: 'https://gitee.com/liyi2020'}
+            {icon: 'github', link: 'https://github.com/215ly'}
         ]
     }
 })
